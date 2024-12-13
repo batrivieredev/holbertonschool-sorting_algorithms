@@ -23,6 +23,7 @@ void bubble_sort(int *array, size_t size);
 void print_list(const listint_t *list); /*Tool function, given*/
 
 void insertion_sort_list(listint_t **list);
+void swap_with_prev(listint_t **ptr) /*Tool for previous*/
 void selection_sort(int *array, size_t size);
 
 #endif
