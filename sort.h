@@ -2,6 +2,7 @@
 #define SORT_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -17,13 +18,11 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-void print_array(const int *array, size_t size); /*Tool function, given*/
-
 void bubble_sort(int *array, size_t size);
-void print_list(const listint_t *list); /*Tool function, given*/
-
+void print_array(const int *array, size_t size);
+void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
-void swap_with_prev(listint_t **ptr) /*Tool for previous*/
 void selection_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
 
-#endif
+#endif /* SORT_H */

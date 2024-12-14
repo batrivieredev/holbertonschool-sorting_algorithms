@@ -1,31 +1,37 @@
 #include "sort.h"
+
 /**
-  * bubble_sort - sorting algo, bubble type
-  * @array: ptr to array of int to sort
-  * @size: size or length of the array, in bytes
-  * Return: void
-  */
+ * swap - Swaps two elements of an array
+ * @a: Integer a
+ * @b: Integer b
+ */
+void swap(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+/**
+ * bubble_sort - Doubly linked list node
+ * @array: Array of integers to print
+ * @size: Size of the array
+ */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i;
-	int temp;
-	int swap_flag = 1;
+	size_t i, j;
 
 	if (size < 2)
 		return;
 
-	while (swap_flag == 1)
+	for (i = 0; i < size - 1; i++)
 	{
-		swap_flag = 0;
-		for (i = 0; i < size - 1; i++)
+		for (j = 0; j < size - i - 1; j++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[j] > array[j + 1])
 			{
-				temp = array[i];
-				array[i] = array[i + 1];
-				array[i + 1] = temp;
+				swap(&array[j], &array[j + 1]);
 				print_array(array, size);
-				swap_flag = 1;
 			}
 		}
 	}

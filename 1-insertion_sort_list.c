@@ -42,7 +42,7 @@ void insertion_sort_list(listint_t **list)
 		{
 			swap_with_prev(&ptr);
 
-			if (ptr->prev == NULL)
+			if (ptr->prev == NULL) /* si ptr = head */
 				*list = ptr;
 
 			print_list(*list);
